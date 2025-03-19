@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #e5e7eb;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.code-bg {
+  background: linear-gradient(180deg, rgba(17, 17, 17, 0.8) 0%, rgba(10, 10, 10, 0.9) 100%);
+}
+
+.terminal-window {
+  background: rgba(30, 30, 30, 0.95);
+  border: 1px solid #333;
+  border-radius: 8px;
+}
+
+.terminal-header {
+  background: #1a1a1a;
+  border-bottom: 1px solid #333;
+  padding: 8px;
+  border-radius: 8px 8px 0 0;
+}
+
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.typing-effect::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
